@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 | Botão com Caixa De Alerta</title>
+
+    <script>
+
+        function exibeAlerta() //EXERCÍCIO 2
+        {
+            alert("Você clicou no Botão!");
+        }
+
+    </script>
+    
+</head>
+
+    <style>
+
+        body
+        {
+
+            background-color: rgb(170, 217, 248);
+
+        }
+
+        h1
+        {
+            display: block;
+            color: black;
+            font-weight: bold;
+            margin-top: 100px;
+            margin-left: 70px;
+        }
+
+        p
+        {
+            display: block;
+            color: black;
+            font-size: 1.5em;
+            margin-top: 70px;
+            margin-left: 70px;
+        }
+
+        .botao
+        {   
+            display: block;        
+            background: #F9F9F9;
+            border: 1px solid #CCCCCE;
+            border-radius: 3px;
+            box-shadow: 0 3px 0 rgba(0, 0, 0, .3);
+            color: #616165;            
+            font-family: "Trebuchet MS";
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 25px;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow:1px 1px 0 #FFF;
+            padding: 15px 15px;            
+            width: 150px;
+            position: relative;
+            top: 20px;
+            left: 70px;
+        }
+
+    
+    </style>    
+
+    <body>
+
+        <h1>JAVASCRIPT ALERT</h1>
+
+        <p>Exercício 2. Exibindo caixa de alerta com um Botão através de uma função JAVASCRIPT.</p>
+
+        <input class="botao" type="button" onclick="exibeAlerta()" value="EXIBIR ALERTA"/> <!--EXERCÍCIO 2 Criação Botão com onClick chamando a função-->
+
+    </body>
+    </html>
