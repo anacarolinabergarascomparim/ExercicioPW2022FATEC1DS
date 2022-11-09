@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 | Função</title>
+    <script>
+        // Função Nomeada
+        function Recepcao()
+        {
+            alert('Olá Professores! Testando Função Nomeada com Evento');
+        };
+       
+    </script>
+</head>
+<style>
+
+    body
+    {
+
+        background-color: rgb(170, 217, 248);
+
+    }
+
+</style>    
+<body onload="Recepcao()">
+    
+    <script type="text/javascript">
+        
+        document.write("O quadrado de 2 é: ");
+        document.write( quadrado(2) ); 
+        //Função Nomeada comparâmetro e retorno
+        function quadrado(numero)
+        {
+        //Construtor
+         var resposta = numero * numero;
+         return resposta;
+        }
+
+        let saudacao = nome => { return `<br/>Olá ${nome}, sejam bem vindos!`;};
+        document.write( saudacao("Professores") ); 
+
+        //arrow function
+        let soma = (a, b) => {return a + b;};
+        document.write(`<br/> Soma é: `);
+        document.write(soma(3, 3));
+
+    </script><!DOCTYPE html>
+</body>
+<html lang="pt-br">
+<head>
+</html>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 | Função</title>
+    <script>
+        // Função Nomeada
+        function Recepcao()
+        {
+            alert('Olá Professores! Testando Função Nomeada com Evento');
+        };
+       
+    </script>
+</head>
+<style>
+
+    body
+    {
+
+        background-color: rgb(170, 217, 248);
+
+    }
+
+</style>    
+<body onload="Recepcao()">
+    
+    <script type="text/javascript">
+        
+        document.write("O quadrado de 2 é: ");
+        document.write( quadrado(2) ); 
+        //Função Nomeada comparâmetro e retorno
+        function quadrado(numero)
+        {
+        //Construtor
+         var resposta = numero * numero;
+         return resposta;
+        }
+
+        let saudacao = nome => { return `<br/>Olá ${nome}, sejam bem vindos!`;};
+        document.write( saudacao("Professores") ); 
+
+        //arrow function
+        let soma = (a, b) => {return a + b;};
+        document.write(`<br/> Soma é: `);
+        document.write(soma(3, 3));
+
+    </script>
+</body>
+</html>
