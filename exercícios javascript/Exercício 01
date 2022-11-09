@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 | Caixa De Alerta</title>
+
+    <script>
+
+        alert("Olá professores! Boa Tarde."); //EXERCÍCIO 1
+
+    </script>
+    
+</head>
+
+    <style>
+
+        body
+        {
+
+            background-color: rgb(170, 217, 248);
+
+        }
+
+        h1
+        {
+            display: block;
+            color: black;
+            font-weight: bold;
+            margin-top: 100px;
+            margin-left: 70px;
+        }
+
+        p
+        {
+            display: block;
+            color: black;
+            font-size: 1.5em;
+            margin-top: 70px;
+            margin-left: 70px;
+        }
+
+    
+    </style>    
+
+    <body>
+
+        <h1>JAVASCRIPT ALERT</h1>
+
+        <p>Exercício 1. Exibindo caixa de alerta ao atualizar a página.</p>
+
+    </body>
+    </html>
