@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 | Eventos</title>
+
+    <script>
+
+         //EXERCÍCIO 4
+         function mOver(obj)
+        {
+            obj.innerHTML="Obrigado"
+        }
+
+        function mOut(obj)
+        {
+            obj.innerHTML="Passe o mouse em mim"
+        }
+
+        function checkCookies()
+        {
+            if (navigator.cookieEnabled==true)
+	        {
+	            alert("Cookies são permitidos")
+	        }
+            else
+	        {
+	            alert("Cookies não são permitidos")
+	        }
+        }
+
+        function emFoco(x)
+        {
+            x.style.background = "yellow";
+        }
+
+        function Mudar()
+        {
+            var x=document.getElementById("fname");
+            x.value=x.value.toUpperCase();
+        }
+
+    </script>
+    
+</head>
+
+    <style>
+
+        body
+        {
+
+            background-color: rgb(170, 217, 248);
+
+        }
+
+        h1
+        {
+            display: block;
+            color: black;
+            font-weight: bold;
+            margin-top: 100px;
+            margin-left: 70px;
+        }
+
+        p
+        {
+            display: block;
+            color: black;
+            font-size: 1.5em;
+            margin-top: 70px;
+            margin-left: 70px;
+        }
+
+        
+        input
+        {
+            
+            margin-left: 150px;
+            font-size: 1.5em;
+        }
+
+        .eventos1
+        {
+            background-color:#1607f1;
+            color:aliceblue;
+            font-size: 2em;
+            width:350px;
+            height:50px;
+            padding:40px;
+            margin-top: 30px;
+            margin-left: 70px;
+        }
+
+    
+    </style>    
+
+    <body onload="checkCookies()">
+
+        <h1>JAVASCRIPT EVENTOS</h1>
+
+        <p>* EVENTOS: onMouseOver e onMouseOut <br> Esses eventos são responsáveis pelas ações que o usuário faz com o mouse, <br> passando o mouse no elemento e tirando o mouse do elemento, respectivamente.</p>
+
+        <div class="eventos1" onmouseover="mOver(this)" onmouseout="mOut(this)">Passe o mouse em mim</div>
+
+        <hr/>
+
+        <p>* EVENTO: onLoad pode ser usado quando queremos que algo seja carregado junto com o carregamento da página.</p>
+
+        <p>Irá aparecer um alert dizendo se os cookies estão ou não liberados em seu navegador</p>
+
+        <hr/>
+
+        <p>* EVENTO onfocus: o elemento é focado</p>
+
+        <input type="text" onfocus="emFoco(this)">
+
+        <hr/>
+
+        <p>* EVENTO onChange é utilizado para que seja realizada determinada ação após alguma mudança. </p>
+
+        <p>Insira seu Nome:</p>
+        
+        <input type="text" id="fname" onchange="Mudar()">
+
+        <p>Ao clicarmos fora do input text o texto escrito nele ficará todo em caixa alta.</p>
+
+    </body>
+    </html>
