@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 | DOM</title>
+
+    <script>
+
+        function mudarCor(novaCor) //EXERCÍCIO 3 - document.getElementById
+        {
+            var elemento = document.getElementById("para1");
+            elemento.style.color = novaCor;
+        }
+
+        //---------------------------------------------------------------------
+
+        function div1() //EXERCICIO 3 - getElementsByTagName
+        {
+            var div1 = document.getElementById('div1');
+            var div1Paras = div1.getElementsByTagName('p');
+            var num = div1Paras.length;
+            alert('A DIV1 TEM ' + num + ' PARAGRAFOS');
+        }
+
+        //----------------------------------------------------------------------
+
+        // EXERCICIO 3 - document.getElementByClassName()
+
+        function lista()
+        {
+            var lista = document.getElementsByClassName("exemplo")[0];
+            lista.getElementsByClassName("crianca")[0].innerHTML = "LEITE";
+        }
+
+        //----------------------------------------------------------------------
+
+        //EXERCÍCIO 3 - document.querySelector()
+
+        function MinhaFuncao()
+        {
+            document.querySelector("h2").style.backgroundColor = "red";
+        }
+
+        //----------------------------------------------------------------------
+
+        //EXERCÍCIO 3 - document.querySelectorAll()
+
+        function MinhaFuncao2()
+        {
+            var x = document.querySelectorAll("h2, div, span");
+            var i;
+            for (i = 0; i < x.length; i++)
+            {
+                x[i].style.backgroundColor = "red";
+            }
+        }
+
+    </script>
+
+</head>
+
+    <style>
+
+        body
+        {
+
+            background-color: rgb(170, 217, 248);
+
+        }
+
+        div
+        {
+            margin-left: 70px;
+        }
+
+        hr
+        {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        h1
+        {
+            display: block;
+            color: black;
+            font-weight: bold;
+            margin-top: 100px;
+            margin-left: 70px;
+        }
+
+        h2
+        {
+            display: block;
+            color: black;
+            font-weight: bold;
+            margin-top: 100px;
+            margin-left: 70px;
+        }
+
+        p
+        {
+            display: block;
+            color: black;
+            font-size: 1.5em;
+            margin-top: 50px;
+            margin-left: 70px;
+        }
+
+        .botao
+        {   
+            display: block;        
+            background: #F9F9F9;
+            border: 1px solid #CCCCCE;
+            border-radius: 3px;
+            box-shadow: 0 3px 0 rgba(0, 0, 0, .3);
+            color: #616165;            
+            font-family: "Trebuchet MS";
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 25px;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow:1px 1px 0 #FFF;
+            padding: 15px 15px;            
+            width: 150px;
+            position: relative;
+            left: 70px;
+            margin-top: 30px;
+        }
+
+        .div1
+        {
+            border: solid blue 3px;
+        }
+
+        .exemplo
+        {
+            margin-left: 70px;
+        }
+    
+    </style>    
+
+    <body>
+
+        <h1>DOM</h1>
+
+        <p>Exercício 3. DOM (Document Object Model).</p>
+
+        <p>O DOM (Document Object Model) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na Web.</p>
+
+        <p>O Document Object Model (DOM) é uma interface de programação para os documentos HTML e XML. Representa a página de forma que <br> os programas possam alterar a estrutura do documento, alterar o estilo e conteúdo. O DOM representa o documento com nós e objetos, dessa <br> forma, as linguagens de programação podem se conectar à página.</p>
+
+        <hr/>
+
+        <p>* document.getElementById(): Apresenta Sintaxe | var elemento = document.getElementById(id); | onde <br> elemento é uma referência a um objeto Element, ou null se um elemento com o ID especificado não estiver contido neste documento.
+             <br> e id é uma string que diferência maiúsculas e minúsculas representando o ID único do elemento sendo procurado.</p>
+
+        <p id="para1"> EXEMPLO document.getElementById(): </p>
+
+             <button class="botao" onclick="mudarCor('blue');">Azul</button>
+
+             <button class="botao" onclick="mudarCor('red');">Vermelho</button>
+
+        <hr/>
+
+        <p>* Element.getElementsByTagName(): Apresenta Sintaxe | getElementsByTagName(tagName)| tagName é o nome qualificado <br> a ser procurado. A string especial "*" representa todos os elementos. Para compatibilidade com XHTML, deve-se usar letras minúsculas.</p>
+
+        <p>EXEMPLO getElementsByTagName:</p>
+
+        <div id="div1">
+            <p>PARAGRAFO</p>
+            <p>PARAGRAFO</p>
+            <p>PARAGRAFO</p>
+            <p>PARAGRAFO. ESSE EXEMPLO MOSTRARÁ NUMA CAIXA DE ALERTA, QUANTOS PARÁGRAFOS TEM A DIV1</p>
+            <button class="botao" onclick="div1();">Parágrafos</button><br />
+        </div>
+
+        <hr/>
+
+        <p>*  document.getElementByClassName(): Apresenta Sintaxe | var elementos = document.getElementByClassName("nome-da-classe"); | <br> Ele descreve uma maneira de definir conjuntos de elementos relacionados do documento: <br> todos elementos que possuem o mesmo identificador em seu atributo class fazem parte do mesmo conjunto</p>
+
+        <ul class="exemplo">
+
+            <li class="crianca">Café</li>
+            <li class="crianca">Chá</li>
+
+        </ul>
+          
+        <button class="botao" onclick="lista();">Troca Lista</button>        
+
+        <hr/>
+
+        <p>*  document.querySelector(): serve para selecionar um elemnto CSS só. </p>
+        
+        <h2>MUDA A COR DO FUNDO!</h2>
+        <button class="botao" onclick="MinhaFuncao();">Mudar Cor</button>
+
+        <hr/>
+
+        <p>*  document.querySelectorAll(); serve para encontrar elementos HTML que corresponde a um seletor CSS, especificado por id, class, etc. </p>
+
+        <h1>Elemento H1.</h1>
+
+        <h2>Elemento H2.</h2>
+
+        <div class="div">É uma DIV.</div>
+
+        <p>PARAGRAFO.</p>
+
+        <p>PARAGRAFO <span style="color:brown;">COM COR</span> EM VERMELHO.</p>
+
+
+        <button class="botao" onclick="MinhaFuncao2()">Mudar Cores</button>    
+
+    </body>
+    </html>
